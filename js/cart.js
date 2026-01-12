@@ -35,7 +35,7 @@ function updateCartUI() {
 
     if (cart.length === 0) {
         itemsContainer.innerHTML = `<p style="text-align:center;color:#888">Votre panier est vide.</p>`;
-        totalEl.innerText = "0 €";
+        totalEl.innerText = "0 DH";
         return;
     }
 
@@ -51,14 +51,14 @@ function updateCartUI() {
             <img src="${item.image}" alt="${item.name}">
             <div style="flex:1">
                 <strong>${item.name}</strong>
-                <p>${item.price} €</p>
+                <p>${item.price} DH</p>
             </div>
             <span onclick="removeFromCart(${index})" style="cursor:pointer;color:#ff4d4d">&times;</span>
         `;
         itemsContainer.appendChild(div);
     });
 
-    totalEl.innerText = total + " €";
+    totalEl.innerText = total + " DH";
 }
 
 /* CHECKOUT */
